@@ -6,6 +6,15 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { LinksFunction } from "@remix-run/node";
+
+export const links: LinksFunction = () => [
+  {
+    rel: "preload",
+    href: "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Inter:wght@400..700&display=swap",
+    as: "style",
+  },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
